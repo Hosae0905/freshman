@@ -1,4 +1,4 @@
-package com.project.freshman.company.model;
+package com.project.freshman.company.model.entity;
 
 import lombok.*;
 
@@ -23,6 +23,7 @@ public class Company {
     private String companyAddress;
     private String companyDepartment;
     private String companyTel;
+    private String authority;
     private LocalDate createdAt;
     private LocalDate updatedAt;
 }

@@ -1,4 +1,4 @@
-package com.project.freshman.company.model;
+package com.project.freshman.company.model.request;
 
 import lombok.Getter;
 import lombok.Setter;
