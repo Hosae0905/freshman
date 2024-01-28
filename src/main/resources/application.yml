@@ -4,3 +4,10 @@ spring:
     username: ${DB_USER}
     password: ${DB_PW}
     driver-class-name: ${DB_DRIVER}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true

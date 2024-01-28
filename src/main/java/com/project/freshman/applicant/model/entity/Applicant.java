@@ -22,7 +22,7 @@ public class Applicant {
     private String applicantPw;
     private String applicantTel;
     private String applicantAddress;
-    private Boolean authority;
+    private String authority;
     private Boolean status;
     private LocalDate createdAt;
     private LocalDate updatedAt;
