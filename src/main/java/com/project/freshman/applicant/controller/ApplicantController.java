@@ -5,6 +5,7 @@ import com.project.freshman.applicant.model.request.PostSignUpReq;
 import com.project.freshman.applicant.model.request.PostUpdateReq;
 import com.project.freshman.applicant.service.ApplicantService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -15,22 +16,22 @@ public class ApplicantController {
     private final ApplicantService applicantService;
 
     @RequestMapping(method = RequestMethod.POST, value = "/signup")
-    public void applicantSignUp(@RequestBody PostSignUpReq request) {
-        applicantService.signUp(request);
+    public ResponseEntity<Object> applicantSignUp(@RequestBody PostSignUpReq request) {
+        return ResponseEntity.ok().body(applicantService.signUp(request));
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/login")
-    public void applicantLogin(@RequestBody PostLoginReq request) {
-        applicantService.login(request);
+    public ResponseEntity<Object> applicantLogin(@RequestBody PostLoginReq request) {
+        return ResponseEntity.ok().body(applicantService.login(request));
     }
 
     @RequestMapping(method = RequestMethod.PATCH, value = "/update")
-    public void applicantUpdate(@RequestBody PostUpdateReq request) {
-        applicantService.update(request);
+    public ResponseEntity<Object> applicantUpdate(@RequestBody PostUpdateReq request) {
+        return ResponseEntity.ok().body(applicantService.update(request));
     }
 
     @RequestMapping(method = RequestMethod.DELETE, value = "/delete/{idx}")
-    public void applicantDelete(@PathVariable Long idx) {
-        applicantService.delete(idx);
+    public ResponseEntity<Object> applicantDelete(@PathVariable Long idx) {
+        return ResponseEntity.ok().body(applicantService.delete(idx));
     }
 }
