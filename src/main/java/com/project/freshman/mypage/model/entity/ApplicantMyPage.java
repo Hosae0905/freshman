@@ -1,6 +1,9 @@
-package com.project.freshman.applicant.model.entity;
+package com.project.freshman.mypage.model.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -10,20 +13,15 @@ import java.time.LocalDate;
 
 @Entity
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
-@Setter
-public class Applicant {
+public class ApplicantMyPage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idx;
     private String applicantEmail;
-    private String applicantPw;
     private String applicantTel;
     private String applicantAddr;
-    private String authority;
-    private Boolean status;
     private LocalDate createdAt;
-    private LocalDate updatedAt;
 }
